@@ -29,14 +29,14 @@ module.exports = function(options) {
       if (err) {
         debug(`Could not create cache dir ${options.cacheDir}`);
 
-        return next(err);
+        return done(err);
       }
 
       debug(`Using directory ${options.cacheDir} for cached images`);
 
       async.eachLimit(matchedFiles, 5, tinifyFile(files, localCache, options), (err) => {
         if (err) {
-          return next(err);
+          return done(err);
         }
 
         if (tinify.compressionCount !== undefined) {
