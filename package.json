@@ -1,0 +1,40 @@
+{
+  "name": "metalsmith-tinify",
+  "version": "1.0.0",
+  "description": "A metalsmith plugin to compress images uning the tinify API",
+  "main": "index.js",
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "mocha test --recursive",
+    "test:watch": "mocha test --recursive --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saintedlama/metalsmith-tinify.git"
+  },
+  "keywords": [
+    "tinify",
+    "metalsmith"
+  ],
+  "author": "Christoph Walcher <christoph.walcher@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saintedlama/tinify-metalsmith/issues"
+  },
+  "homepage": "https://github.com/saintedlama/tinify-metalsmith#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "istanbul": "^0.4.5",
+    "metalsmith": "^2.3.0",
+    "mocha": "^3.2.0",
+    "rimraf": "^2.5.4"
+  },
+  "dependencies": {
+    "debug": "^2.6.0",
+    "mkdirp": "^0.5.1",
+    "multimatch": "^2.1.0",
+    "tinify": "^1.4.0"
+  }
+}
