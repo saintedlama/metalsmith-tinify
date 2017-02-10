@@ -1,6 +1,6 @@
 {
   "name": "metalsmith-tinify",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A metalsmith plugin to compress images uning the tinify API",
   "main": "index.js",
   "engines": {
