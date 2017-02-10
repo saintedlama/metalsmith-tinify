@@ -75,4 +75,20 @@ describe('cache', function() {
       });
     });
   });
+
+  it('should create directories in cache if a file with directory part is cached', (done) => {
+    const imgCache = cache(tempDir);
+    const imageContent = new Buffer('');
+
+    imgCache.add(path.join('img', 'image.png'), imageContent, imageContent, (err) => {
+      expect(err).to.not.exist;
+
+      imgCache.get(path.join('img', 'image.png'), imageContent, (err, cached) => {
+        expect(err).to.not.exist;
+        expect(cached).to.exist;
+
+        done();
+      });
+    });
+  });
 });
